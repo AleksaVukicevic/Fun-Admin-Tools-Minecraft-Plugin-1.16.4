@@ -44,7 +44,7 @@ public class ChickenCommand implements CommandExecutor {
 			return false;
 		}
 		
-		p.getWorld().spawnEntity(p.getLocation(), EntityType.CHICKEN);		
+		p.getWorld().spawnEntity(p.getLocation(), EntityType.CHICKEN).setCustomName(p.getName());;		
 		p.setHealth(0);
 		p.sendMessage("You've been chickened!");
 		s.sendMessage("Chickened player!");

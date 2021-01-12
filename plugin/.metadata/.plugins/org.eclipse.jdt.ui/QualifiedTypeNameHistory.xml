@@ -32,6 +32,6 @@
     <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.listeners.Listeners"/>
     <fullyQualifiedTypeName name="org.bukkit.entity.EntityType"/>
     <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.SmiteCommand"/>
-    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.ExplodeCommand"/>
     <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.ChickenCommand"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.ExplodeCommand"/>
 </qualifiedTypeNameHistroy>

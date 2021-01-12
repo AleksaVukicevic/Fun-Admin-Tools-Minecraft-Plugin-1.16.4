@@ -44,7 +44,7 @@ public class ExplodeCommand implements CommandExecutor {
 			return false;
 		}
 		
-		p.getWorld().spawnEntity(p.getLocation(), EntityType.PRIMED_TNT);
+		p.getWorld().spawnEntity(p.getLocation(), EntityType.PRIMED_TNT).setFireTicks(0);
 
 		
 		return false;
