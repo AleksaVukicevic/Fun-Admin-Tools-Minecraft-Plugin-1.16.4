@@ -1,0 +1,10 @@
+name: SpawnCreepers
+version: 1.0
+author: Aleksa
+main: me.aleksa.spawnCreepers.Main
+description: spawn creepers
+
+commands:
+  spawncreeps:
+    aliases: [sc]
+    description: spawn many creepers

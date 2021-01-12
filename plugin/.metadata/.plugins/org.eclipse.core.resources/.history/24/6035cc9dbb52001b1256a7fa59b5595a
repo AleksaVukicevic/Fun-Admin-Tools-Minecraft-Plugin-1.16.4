@@ -1,0 +1,14 @@
+package me.aleksa.spawnCreepers;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+import me.aleksa.spawnCreepers.commands.SpawnCreeper;
+
+public class Main extends JavaPlugin {
+	
+	@Override 
+	public void onEnable() {
+		new SpawnCreeper(this);
+	}
+	
+}

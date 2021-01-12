@@ -1,0 +1,153 @@
+package me.aleksa.spawnCreepers.listeners;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+
+import me.aleksa.spawnCreepers.Main;
+
+public class Listeners implements Listener {
+	@SuppressWarnings("unused")
+	private Main plugin;
+	
+	public Listeners(Main plugin) {
+		this.plugin = plugin;
+		Bukkit.getPluginManager().registerEvents(this, plugin);
+	}
+	
+	
+	
+	
+	//public MpData[] mp = new MpData[Bukkit.getServer().getMaxPlayers()];
+	public List<MpData> mp = new ArrayList<MpData>();
+	
+	public boolean moveMob;
+	
+	public static boolean en = true;
+
+	public Entity mob;
+	
+	@EventHandler
+	public void onMove(PlayerMoveEvent e) 
+	{
+		if(en) 
+		{
+			for(int i = 0; i > mp.size(); i++) 
+			{
+				if(mp.get(i).playerName == e.getPlayer().getName()) 
+				{			
+					mp.get(i).mob.teleport(e.getPlayer().getLocation());				
+				}
+			}						
+		}
+	}
+	
+	@EventHandler
+	public void OnInteractEntity(PlayerInteractEntityEvent e) 
+	{
+		if(en) 
+		{			
+			Material mat = e.getPlayer().getInventory().getItemInMainHand().getType();	
+			
+			if(mat == Material.STICK) 
+			{
+				if(!mp.isEmpty()) 
+				{					
+					for(int i = 0; i > mp.size(); i++) 
+					{
+						if(mp.get(i).playerName == e.getPlayer().getName()) 
+						{
+							// Found player
+							
+							LivingEntity le = (LivingEntity) e.getRightClicked();							
+							le.setAI(false);					
+							le.setCollidable(false);
+							le.setInvisible(true);							
+							mp.get(i).mob = (Entity) le;							
+
+							e.getPlayer().setCollidable(false);
+							e.getPlayer().getPlayer().setInvisible(true);
+			
+							return;
+						}
+					}					
+				}
+				
+
+				// Didn't find player so add
+				
+				mp.add(new MpData(e.getPlayer().getName(), e.getRightClicked()));	
+				
+				for(int i = 0; i > mp.size(); i++) 
+				{
+					if(mp.get(i).playerName == e.getPlayer().getName()) 
+					{
+						// Found player
+						
+						LivingEntity le = (LivingEntity) e.getRightClicked();							
+						le.setAI(false);					
+						le.setCollidable(false);
+						le.setInvisible(true);							
+						mp.get(i).mob = (Entity) le;							
+
+						e.getPlayer().setCollidable(false);
+						e.getPlayer().getPlayer().setInvisible(true);
+		
+						return;
+					}
+				}	
+				
+				e.getPlayer().sendMessage("Error");
+								
+			}
+		}
+
+	}
+
+	public void OnInteract(PlayerInteractEvent e) 
+	{
+		if(en) 
+		{
+			Material mat = e.getPlayer().getInventory().getItemInMainHand().getType();	
+			
+			if(mat == Material.STICK) 
+			{
+				if(!mp.isEmpty()) 
+				{					
+					for(int i = 0; i > mp.size(); i++) 
+					{
+						if(mp.get(i).playerName == e.getPlayer().getName()) 
+						{
+							// Found player
+							
+							LivingEntity le = (LivingEntity) mp.get(i).mob;							
+							le.setAI(false);					
+							le.setCollidable(false);
+							le.setInvisible(true);							
+							mp.get(i).mob = (Entity) le;							
+
+							e.getPlayer().setCollidable(false);
+							e.getPlayer().getPlayer().setInvisible(true);
+			
+							return;
+						}
+					}					
+				}
+			}
+
+		}
+	}
+}

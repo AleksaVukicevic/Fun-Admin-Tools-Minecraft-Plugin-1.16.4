@@ -1,0 +1,16 @@
+package me.aleksa.spawnCreepers.listeners;
+
+import org.bukkit.entity.Entity;
+
+public class MpData {
+	public String playerName;
+	public Entity mob;
+	
+	public MpData(String playerName, Entity mob) 
+	{
+		this.playerName = playerName;
+		this.mob = mob;
+		
+	}
+	
+}

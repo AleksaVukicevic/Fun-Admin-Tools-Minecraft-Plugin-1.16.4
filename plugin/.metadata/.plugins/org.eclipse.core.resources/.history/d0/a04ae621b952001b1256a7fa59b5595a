@@ -1,0 +1,7 @@
+package me.aleksa.spawnCreepers.commands;
+
+import org.bukkit.command.CommandExecutor;
+
+public class SpawnCreeper implements CommandExecutor {
+
+}

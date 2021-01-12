@@ -1,0 +1,13 @@
+name: SpawnCreepers
+version: 1.0
+author: Aleksa
+main: me.aleksa.spawnCreepers.Main
+description: spawn creepers
+api-version: 1.16
+usage: "Usage: /<command>"
+
+
+commands:
+  spawncreeps:
+    aliases: [sc]
+    description: spawn lots of creepers

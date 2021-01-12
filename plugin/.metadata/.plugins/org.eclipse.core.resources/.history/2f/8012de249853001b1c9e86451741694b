@@ -1,0 +1,6 @@
+package me.aleksa.spawnCreepers.listeners;
+
+public class MpData {
+	public String playerName;
+	
+}

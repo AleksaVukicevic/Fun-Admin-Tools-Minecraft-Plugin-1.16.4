@@ -1,0 +1,10 @@
+name: SpawnCreeps
+version: 1.0
+author: Aleksa
+main: me.aleksa.spawnCreepers.Main
+description: This plugin does so much stuff it can't be contained!
+
+commands:
+  spawncreeps:
+    aliases: sc
+    description: spawn lots of creepers

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.bukkit.plugin.java.JavaPlugin"/>
+    <fullyQualifiedTypeName name="org.bukkit.command.CommandExecutor"/>
+    <fullyQualifiedTypeName name="org.bukkit.command.CommandSender"/>
+    <fullyQualifiedTypeName name="org.bukkit.command.Command"/>
+    <fullyQualifiedTypeName name="org.bukkit.Location"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.SpawnCreeper"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.HealCommand"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.PingCommand"/>
+    <fullyQualifiedTypeName name="org.bukkit.GameMode"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.GmCommand"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.OpenInvCommand"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.SudoCommand"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.Listener"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.Main"/>
+    <fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.EventHandler"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerMoveEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
+    <fullyQualifiedTypeName name="org.bukkit.World"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.EntityType"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.MobCommand"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerInteractEntityEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerInteractEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.Material"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.block.Action"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.Entity"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.LivingEntity"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.listeners.MpData"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.listeners.Listeners"/>
+</qualifiedTypeNameHistroy>

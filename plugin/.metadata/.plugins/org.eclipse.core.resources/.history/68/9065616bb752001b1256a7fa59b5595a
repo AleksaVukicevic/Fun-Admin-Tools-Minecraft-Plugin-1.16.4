@@ -1,0 +1,3 @@
+module spawnCreepers {
+	requires spigot;
+}

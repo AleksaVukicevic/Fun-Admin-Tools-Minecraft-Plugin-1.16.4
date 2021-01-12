@@ -1,0 +1,15 @@
+name: SpawnCreeps
+version: 1.0
+author: Aleksa
+main: me.aleksa.spawnCreepers.Main
+description: This plugin does so much stuff it can't be contained!
+
+commands:
+  ping:
+    description: pings you
+  heal:
+    aliases: h
+    description: heals you
+  spawncreeps:
+    aliases: sc
+    description: spawn lots of creepers
