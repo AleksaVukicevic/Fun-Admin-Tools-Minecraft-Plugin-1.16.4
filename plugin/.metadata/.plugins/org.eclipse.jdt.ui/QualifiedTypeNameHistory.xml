@@ -19,7 +19,6 @@
     <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerMoveEvent"/>
     <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
     <fullyQualifiedTypeName name="org.bukkit.World"/>
-    <fullyQualifiedTypeName name="org.bukkit.entity.EntityType"/>
     <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.MobCommand"/>
     <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerInteractEntityEvent"/>
     <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerInteractEvent"/>
@@ -31,4 +30,8 @@
     <fullyQualifiedTypeName name="org.bukkit.entity.LivingEntity"/>
     <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.listeners.MpData"/>
     <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.listeners.Listeners"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.EntityType"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.SmiteCommand"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.ExplodeCommand"/>
+    <fullyQualifiedTypeName name="me.aleksa.spawnCreepers.commands.ChickenCommand"/>
 </qualifiedTypeNameHistroy>

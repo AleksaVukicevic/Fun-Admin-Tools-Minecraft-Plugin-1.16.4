@@ -46,6 +46,7 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\aleks\Desktop\FunAdminTools 1.16.4.jar"/>
 			<item value="C:\Users\aleks\Desktop\plugins\SpawnCreeps.jar"/>
 			<item value="C:\Users\aleks\Desktop\pluginsSpawnCreeps.jar"/>
 		</list>
