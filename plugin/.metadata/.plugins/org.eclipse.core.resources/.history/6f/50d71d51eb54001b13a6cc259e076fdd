@@ -1,0 +1,34 @@
+name: FunAdminTools
+version: 1.0
+author: Aleksa Vukicevic
+main: me.aleksa.spawnCreepers.Main
+description: This plugin does so much stuff it can't be contained!
+
+commands:
+  chicken:
+    description: kills the player and leaves a chicken
+    usage: "Usage: /chicken <player>"
+  explode:
+    description: explodes a player
+    usage: "Usage: /explode <player>"
+  smite:
+    description: smites a player
+    usage: "Usage: /smite <player>"
+  sudo:
+    aliases: su
+    description: Run as other user
+    usage: "Usage: /sudo <player> <command>"
+  openinventory:
+    aliases: [oi, openinv, openi]
+    description: open players inventory
+  gm:
+    description: change gamemode
+    aliases: g
+  ping:
+    description: pings you...
+  heal:
+    aliases: h
+    description: heals you
+  spawncreeps:
+    aliases: sc
+    description: spawn a number of creepers

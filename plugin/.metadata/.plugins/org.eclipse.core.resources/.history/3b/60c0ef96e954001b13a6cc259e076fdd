@@ -1,0 +1,5 @@
+package me.aleksa.spawnCreepers.commands;
+
+public class SmiteCommand {
+
+}

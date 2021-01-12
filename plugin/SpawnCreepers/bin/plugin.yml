@@ -1,26 +1,39 @@
-name: SpawnCreeps
+name: FunAdminTools
 version: 1.0
-author: Aleksa
+author: Aleksa Vukicevic
 main: me.aleksa.spawnCreepers.Main
 description: This plugin does so much stuff it can't be contained!
 
 commands:
-  mob:
-    description: become a mob
+  chicken:
+    description: kills the player and leaves a chicken
+    usage: "Usage: /chicken <player>"
+  explode:
+    description: explodes a player
+    usage: "Usage: /explode <player>"
+  smite:
+    description: smites a player
+    usage: "Usage: /smite <player>"
   sudo:
     aliases: su
     description: Run as other user
+    usage: "Usage: /sudo <player> <command>"
   openinventory:
     aliases: [oi, openinv, openi]
-    description: open player inventory
+    description: open players inventory
+    usage: "Usage: /oi <player>"
   gm:
     description: change gamemode
     aliases: g
+    usage: "Usage: /gm <player> [0, 1, 2, 3]"
   ping:
-    description: pings you
+    description: pings you...
+    usage: "Usage: /ping"
   heal:
     aliases: h
     description: heals you
+    usage: "Usage: /heal <player>"
   spawncreeps:
     aliases: sc
     description: spawn a number of creepers
+    usage: "Usage: /sc <number>"
