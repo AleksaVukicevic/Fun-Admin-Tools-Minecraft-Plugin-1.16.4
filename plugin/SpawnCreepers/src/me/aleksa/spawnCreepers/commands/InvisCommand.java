@@ -8,20 +8,20 @@ import org.bukkit.entity.Player;
 
 import me.aleksa.spawnCreepers.Main;
 
-public class ExplodeCommand implements CommandExecutor {
+public class InvisCommand implements CommandExecutor {
 	@SuppressWarnings("unused")
 	private Main plugin;
 	
-	public ExplodeCommand(Main plugin) {
+	public InvisCommand(Main plugin) {
 		this.plugin = plugin;
-		plugin.getCommand("explode").setExecutor(this);
+		plugin.getCommand("invisible").setExecutor(this);
 	}
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 			
 		Player s = (Player) sender;
-		Player p = null;
+		Player p = s;
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
@@ -38,12 +38,11 @@ public class ExplodeCommand implements CommandExecutor {
 		}
 		else 
 		{
-			s.sendMessage("Error: /explode takes max 1 args");
+			s.sendMessage("Error: /invisible takes max 1 args");
 			return false;
 		}
 		
-		//p.getWorld().spawnEntity(p.getLocation(), EntityType.PRIMED_TNT).setFireTicks(0);
-		p.getWorld().createExplosion(p.getLocation(), 4);
+		p.setInvisible(!p.isInvisible());
 		
 		return true;
 	}

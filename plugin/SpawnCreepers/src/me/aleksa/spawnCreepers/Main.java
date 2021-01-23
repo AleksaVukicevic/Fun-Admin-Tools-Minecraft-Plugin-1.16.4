@@ -6,6 +6,7 @@ import me.aleksa.spawnCreepers.commands.ChickenCommand;
 import me.aleksa.spawnCreepers.commands.ExplodeCommand;
 import me.aleksa.spawnCreepers.commands.GmCommand;
 import me.aleksa.spawnCreepers.commands.HealCommand;
+import me.aleksa.spawnCreepers.commands.InvisCommand;
 import me.aleksa.spawnCreepers.commands.OpenInvCommand;
 import me.aleksa.spawnCreepers.commands.PingCommand;
 import me.aleksa.spawnCreepers.commands.SmiteCommand;
@@ -32,7 +33,7 @@ public class Main extends JavaPlugin {
 		new SmiteCommand(this);
 		new ExplodeCommand(this);
 		new ChickenCommand(this);
-		
+		new InvisCommand(this);
 		
 
 		// Work in progress :P

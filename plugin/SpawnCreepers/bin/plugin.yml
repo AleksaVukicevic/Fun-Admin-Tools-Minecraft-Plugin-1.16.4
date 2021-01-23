@@ -5,6 +5,9 @@ main: me.aleksa.spawnCreepers.Main
 description: This plugin does so much stuff it can't be contained!
 
 commands:
+  invisible:
+    description: makes a player invisible
+    usage: "Usage: /invisible <player>"
   chicken:
     description: kills the player and leaves a chicken
     usage: "Usage: /chicken <player>"
@@ -18,14 +21,14 @@ commands:
     aliases: su
     description: Run as other user
     usage: "Usage: /sudo <player> <command>"
-  openinventory:
+  openinv:
     aliases: [oi, openinv, openi]
     description: open players inventory
     usage: "Usage: /oi <player>"
   gm:
     description: change gamemode
     aliases: g
-    usage: "Usage: /gm <player> [0, 1, 2, 3]"
+    usage: "Usage: /gm [0, 1, 2, 3] <player>"
   ping:
     description: pings you...
     usage: "Usage: /ping"

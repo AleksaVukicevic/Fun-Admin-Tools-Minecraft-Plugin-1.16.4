@@ -26,12 +26,11 @@ public class GmCommand implements CommandExecutor {
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
-			return false;
+			return true;
 		}
 		
 		if(args.length > 2) {
-			s.sendMessage("Error brah: gm takes max 2 args");
-			s.sendMessage("/gm <0, 1, 2 or 3> <player>");
+			s.sendMessage("Error: /gm takes max 2 args");
 			return false;
 		}
 		
@@ -40,7 +39,7 @@ public class GmCommand implements CommandExecutor {
 			p = Bukkit.getPlayerExact(args[1]);
 			if(p == null) {
 				s.sendMessage("Player " + args[1] + " not found");
-				return false;
+				return true;
 			}
 		}		
 		
@@ -68,12 +67,11 @@ public class GmCommand implements CommandExecutor {
 		}
 		else 
 		{
-			s.sendMessage("Error brah: " + args[0]);
-			s.sendMessage("/gm <0, 1, 2 or 3> <player>");
+			s.sendMessage("Error: " + args[0]);
 			return false;
 
 		}
 		
-		return false;
+		return true;
 	}
 }

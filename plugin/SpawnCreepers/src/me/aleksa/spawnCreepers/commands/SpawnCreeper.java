@@ -1,5 +1,6 @@
 package me.aleksa.spawnCreepers.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.command.Command;
@@ -22,10 +23,28 @@ public class SpawnCreeper implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		
-		Player p = (Player) sender;
+		Player s = (Player) sender;
+		Player p = null;
 		
-		if(!p.isOp()) {
-			p.sendMessage("Don't have Permission");
+		if(!s.isOp()) {
+			s.sendMessage("Don't have Permission");
+			return true;
+		}
+		
+		if(args.length == 2) 
+		{
+			p = Bukkit.getPlayerExact(args[1]);
+			if(p == null) {
+				s.sendMessage("Player " + args[1] + " not found");
+				return true;
+			}
+		}
+		else if(args.length == 1) 
+		{
+			p = s;
+		}
+		else 
+		{
 			return false;
 		}
 		
@@ -34,16 +53,20 @@ public class SpawnCreeper implements CommandExecutor {
 		
 		int amount = Integer.parseInt(args[0]);
 		
-		if(amount <= 100) {
-			for(int i = 0; i < amount; i++) {
+		if(amount <= 256) 
+		{
+			for(int i = 0; i < amount; i++) 
+			{
 				w.spawnEntity(loc,EntityType.CREEPER);
 			}
-			p.sendMessage("Spawned" + amount + "creepers");
+			p.sendMessage("Spawned " + amount + " creepers");
+			return true;
 		}
 		else {
-			p.sendMessage("Max is 100 :/");
+			p.sendMessage("Max is 256 :/");
+			return true;
 		}
 		
-		return false;
+		
 	}
 }

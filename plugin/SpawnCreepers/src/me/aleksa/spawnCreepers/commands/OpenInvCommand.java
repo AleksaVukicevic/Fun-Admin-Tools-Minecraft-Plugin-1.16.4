@@ -25,12 +25,11 @@ public class OpenInvCommand implements CommandExecutor {
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
-			return false;
+			return true;
 		}
 		
 		if(args.length > 1) {
-			s.sendMessage("Error brah: gm takes 1 args");
-			s.sendMessage("/openinv <player>");
+			s.sendMessage("Error: /oi takes 1 args");
 			return false;
 		}
 		
@@ -39,14 +38,12 @@ public class OpenInvCommand implements CommandExecutor {
 			p = Bukkit.getPlayerExact(args[0]);
 			if(p == null) {
 				s.sendMessage("Player " + args[0] + " not found");
-				return false;
+				return true;
 			}
 		}		
 		
 		s.openInventory(p.getInventory());
 		
-
-		
-		return false;
+		return true;
 	}
 }

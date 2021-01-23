@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
 import me.aleksa.spawnCreepers.Main;
@@ -26,27 +25,26 @@ public class SmiteCommand implements CommandExecutor {
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
-			return false;
+			return true;
 		}
 		
 		if(args.length == 1) 
 		{
 			p = Bukkit.getPlayerExact(args[0]);
-			if(p == null) {
+			
+			if(p == null) 
+			{
 				s.sendMessage("Player " + args[0] + " not found");
-				return false;
+				return true;
 			}
 		}
 		else 
 		{
-			s.sendMessage("Error brah: explode takes max 1 args");
-			s.sendMessage("/smite <player>");
 			return false;
 		}
 		
-		p.getWorld().spawnEntity(p.getLocation(), EntityType.LIGHTNING);
-
+		p.getWorld().strikeLightning(p.getLocation());
 		
-		return false;
+		return true;
 	}
 }

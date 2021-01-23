@@ -25,7 +25,7 @@ public class SudoCommand implements CommandExecutor {
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
-			return false;
+			return true;
 		}
 		
 		if(args.length == 2) 
@@ -33,13 +33,12 @@ public class SudoCommand implements CommandExecutor {
 			p = Bukkit.getPlayerExact(args[0]);
 			if(p == null) {
 				s.sendMessage("Player " + args[0] + " not found");
-				return false;
+				return true;
 			}
 		}
 		else 
 		{
-			s.sendMessage("Error brah: sudo takes max 2 args");
-			s.sendMessage("/sudo <player> <command>");
+			s.sendMessage("Error: /sudo takes max 2 args");
 			return false;
 		}
 		
@@ -47,6 +46,6 @@ public class SudoCommand implements CommandExecutor {
 		p.chat(args[1]);
 
 		
-		return false;
+		return true;
 	}
 }

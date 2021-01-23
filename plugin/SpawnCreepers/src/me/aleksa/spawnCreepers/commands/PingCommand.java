@@ -22,6 +22,6 @@ public class PingCommand implements CommandExecutor {
 		Player p = (Player) sender;
 		p.sendMessage("pong");
 		
-		return false;
+		return true;
 	}
 }

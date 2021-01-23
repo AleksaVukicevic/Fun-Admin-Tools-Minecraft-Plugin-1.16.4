@@ -26,7 +26,7 @@ public class ChickenCommand implements CommandExecutor {
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
-			return false;
+			return true;
 		}
 		
 		if(args.length == 1) 
@@ -34,13 +34,12 @@ public class ChickenCommand implements CommandExecutor {
 			p = Bukkit.getPlayerExact(args[0]);
 			if(p == null) {
 				s.sendMessage("Player " + args[0] + " not found");
-				return false;
+				return true;
 			}
 		}
 		else 
 		{
-			s.sendMessage("Error brah: chicken takes max 1 args");
-			s.sendMessage("/chicken <player>");
+			s.sendMessage("Error: /chicken takes max 1 args");
 			return false;
 		}
 		
@@ -50,6 +49,6 @@ public class ChickenCommand implements CommandExecutor {
 		s.sendMessage("Chickened player!");
 
 		
-		return false;
+		return true;
 	}
 }

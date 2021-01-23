@@ -25,12 +25,11 @@ public class HealCommand implements CommandExecutor {
 		
 		if(!s.isOp()) {
 			s.sendMessage("Don't have Permission");
-			return false;
+			return true;
 		}
 		
 		if(args.length > 1) {
-			s.sendMessage("Error brah: heal takes max 1 args");
-			s.sendMessage("/heal <player>");
+			s.sendMessage("Error: /heal takes max 1 args");
 			return false;
 		}
 		
@@ -39,7 +38,7 @@ public class HealCommand implements CommandExecutor {
 			p = Bukkit.getPlayerExact(args[0]);
 			if(p == null) {
 				s.sendMessage("Player " + args[0] + " not found");
-				return false;
+				return true;
 			}
 		}
 		
@@ -47,6 +46,6 @@ public class HealCommand implements CommandExecutor {
 		p.setFoodLevel(20);
 		p.setSaturation(5);
 		
-		return false;
+		return true;
 	}
 }
